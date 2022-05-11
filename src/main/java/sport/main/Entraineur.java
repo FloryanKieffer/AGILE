@@ -8,6 +8,7 @@ public class Entraineur {
 	private Equipe equipe;
 	private String perf;
 	private ArrayList<Equipe> historique;
+	private MatchStrategy strategyEntraineur;
 
 	/**
 	 * Constructeur d'objets de classe Entraineur
@@ -17,6 +18,7 @@ public class Entraineur {
 		equipe = null;
 		perf = "";
 		historique = new ArrayList<Equipe>();
+		strategyEntraineur = null;
 	}
 
 	public ArrayList<Equipe> getHistorique() {
@@ -42,6 +44,14 @@ public class Entraineur {
 
 	public String getPerf() {
 		return this.perf;
+	}
+	
+	public MatchStrategy getStrategyEntraineur() {
+		return strategyEntraineur;
+	}
+
+	public void setStrategyEntraineur(MatchStrategy strategy) {
+		this.strategyEntraineur = strategy;
 	}
 
 	public void performance() {

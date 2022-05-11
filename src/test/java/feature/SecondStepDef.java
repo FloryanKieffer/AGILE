@@ -19,7 +19,7 @@ public class SecondStepDef{
 	private Entraineur entraineurA;
 	private Entraineur entraineurB;
 	
-	@Given("Un match le lEquipe de LEntraineur A contre LEquipe de lEntraineur B")
+	@Given("Un match de lEquipe de LEntraineur A contre LEquipe de lEntraineur B")
 	public void un_match_le_lEquipe_de_LEntraineur_A_contre_LEquipe_de_lEntraineur_B() {
 		a = new Equipe();
 	    b = new Equipe();

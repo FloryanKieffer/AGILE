@@ -7,7 +7,7 @@ Feature: US_001 Attribution de la performance de lentraineur
 
   @tag1
   Scenario Outline: LEquipe de LEntraineur A joue un match contre LEquipe de LEntraineur B
-    Given Un match le lEquipe de LEntraineur A contre LEquipe de lEntraineur B
+    Given Un match de lEquipe de LEntraineur A contre LEquipe de lEntraineur B
     When Le match se termine sur le score Equipe de LEntraineur A <scoreA> vs <scoreB> Equipe de LEntraineur B
     Then Equipe A obtient <pointA> et Equipe B obtient <pointB> et Entraineur A est <perfA> Entraineur B est <perfB>
 

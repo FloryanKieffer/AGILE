@@ -7,6 +7,10 @@ import org.junit.Test;
 import junit.framework.TestCase;
 import sport.main.Entraineur;
 import sport.main.Equipe;
+import sport.main.MatchDefensif;
+import sport.main.MatchOffensif;
+import sport.main.MatchPossession;
+import sport.main.MatchStrategy;
 
 public class EntraineurTest extends TestCase {
     private Equipe psg;
@@ -38,11 +42,11 @@ public class EntraineurTest extends TestCase {
         psg.setPoints(1);
         celine.setEquipe(psg);
         celine.performance();
-        assertEquals("Mauvais", celine.getPerf());
-        lyon.setPoints(2);
+        assertEquals("Moyen", celine.getPerf());
+        lyon.setPoints(0);
         doe.setEquipe(lyon);
         doe.performance();
-        assertEquals("Moyen", doe.getPerf());
+        assertEquals("Mauvais", doe.getPerf());
         marseille.setPoints(3);
         floryan.setEquipe(marseille);
         floryan.performance();
@@ -91,5 +95,21 @@ public class EntraineurTest extends TestCase {
         assertNotSame(celine, doe);
         doe.setPerf("Bon");
         assertEquals(celine, doe);
+    }
+    
+    @Test
+    public void testStrategyEntraineur() {
+    	MatchStrategy off = new MatchOffensif();
+    	floryan.setStrategyEntraineur(off);
+    	assertEquals("Nous allons utiliser une stratégie offensive pour gagner le match", off.matchStrategy());
+    	assertEquals(off,floryan.getStrategyEntraineur());
+    	MatchStrategy def = new MatchDefensif();
+    	floryan.setStrategyEntraineur(def);
+    	assertEquals("Nous allons utiliser une stratégie défensive pour ne pas perdre le match", def.matchStrategy());
+    	assertEquals(def,floryan.getStrategyEntraineur());
+    	MatchStrategy pos = new MatchPossession();
+    	floryan.setStrategyEntraineur(pos);
+    	assertEquals("Nous allons utiliser une stratégie de possesion pour endormir l'adversaire et gagner le match", pos.matchStrategy());
+    	assertEquals(pos,floryan.getStrategyEntraineur());
     }
 }
