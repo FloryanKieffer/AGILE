@@ -1,5 +1,7 @@
 package sport.main;
 
+import sport.joueur.Joueurs;
+
 public class Equipe {
 
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
@@ -40,6 +42,8 @@ public class Equipe {
     public void setPoints(int points) {
         this.points = points;
     }
+
+    Joueurs joueurs;
 
     public static void match(Equipe a, int scoreA, Equipe b, int scoreB) {
         if (scoreA > scoreB) {

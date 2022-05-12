@@ -7,7 +7,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
 
-import cucumber.api.PendingException;  
 import cucumber.api.java.en.Given;  
 import cucumber.api.java.en.Then;  
 import cucumber.api.java.en.When;  
@@ -42,8 +41,8 @@ public class SecondStepDef{
 	@Then("Equipe A obtient {int} et Equipe B obtient {int} et Entraineur A est {string} Entraineur B est {string}")
 	public void equipe_A_obtient_et_Equipe_B_obtient_et_Entraineur_A_est_Entraineur_B_est(Integer int1, Integer int2, String string, String string2) {
 
-	    Integer scoreA = new Integer(a.getPoints());
-		Integer scoreB = new Integer(b.getPoints());
+	    Integer scoreA = a.getPoints();
+		Integer scoreB = b.getPoints();
 	    assertEquals(int1, scoreA);
 	    assertEquals(int2, scoreB);
 	    entraineurA.performance();

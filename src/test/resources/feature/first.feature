@@ -3,7 +3,7 @@
 Feature: US_000 Affectation des points
   En tant que Equipe
   Je veux calculer mes points et mes points cumules en fonction du résultat du match
-  Afin de de assurer la tracabilité de mes resultats dans le championnat
+  Afin d assurer la tracabilité de mes resultats dans le championnat
 
 
   @tag1

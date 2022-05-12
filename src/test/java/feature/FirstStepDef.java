@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
 
-import cucumber.api.PendingException;  
 import cucumber.api.java.en.Given;  
 import cucumber.api.java.en.Then;  
 import cucumber.api.java.en.When;  
@@ -31,12 +30,10 @@ public class FirstStepDef{
 
 	@Then("Equipe A obtient {int} et Equipe B obtient {int} et Equipe A a {int} Equipe B a {int}")
 	public void equipe_A_obtient_et_Equipe_B_obtient_et_Equipe_A_a_Equipe_B_a(Integer int1, Integer int2, Integer int3, Integer int4) {
-		Integer scoreA = new Integer(a.getPoints());
-		Integer scoreB = new Integer(b.getPoints());
+		Integer scoreA = a.getPoints();
+		Integer scoreB = b.getPoints();
 	    assertEquals(int1, scoreA);
 	    assertEquals(int2, scoreB);
-	    Integer cumulA = new Integer(a.getPointsCumul());
-	    Integer cumulB = new Integer(b.getPointsCumul());
 	    assertEquals(int3, scoreA);
 	    assertEquals(int4, scoreB);
 	}

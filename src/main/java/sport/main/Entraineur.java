@@ -2,6 +2,8 @@ package sport.main;
 
 import java.util.ArrayList;
 
+import sport.match.MatchStrategy;
+
 public class Entraineur {
 
 	// variables d'instance - remplacez l'exemple qui suit par le vôtre

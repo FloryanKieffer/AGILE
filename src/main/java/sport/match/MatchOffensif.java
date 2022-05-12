@@ -1,10 +1,10 @@
-package sport.main;
+package sport.match;
 
-public class MatchPossession implements MatchStrategy {
+public class MatchOffensif implements MatchStrategy {
 	
 	private String strategy;
 	
-	public MatchPossession() {
+	public MatchOffensif() {
 		this.strategy = matchStrategy();
 	}
 	
@@ -15,8 +15,9 @@ public class MatchPossession implements MatchStrategy {
 	public void setStrategy(String strategy) {
 		this.strategy = strategy;
 	}
-	
+
 	public String matchStrategy() {
-		return "Nous allons utiliser une stratégie de possesion pour endormir l'adversaire et gagner le match";
+		return "Nous allons utiliser une stratégie offensive pour gagner le match";
 	}
+
 }

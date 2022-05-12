@@ -1,11 +1,10 @@
 package feature;
 
-import sport.main.Equipe;
-import sport.main.MatchDefensif;
-import sport.main.MatchOffensif;
-import sport.main.MatchPossession;
-import sport.main.MatchStrategy;
 import sport.main.Entraineur;
+import sport.match.MatchDefensif;
+import sport.match.MatchOffensif;
+import sport.match.MatchPossession;
+import sport.match.MatchStrategy;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,8 +18,6 @@ import cucumber.api.java.en.When;
 public class ThirdStepDef{
 	
 	private Entraineur entraineurA;
-	
-	
 	@Given("Un match de lEquipe de LEntraineur A")
 	public void un_match_de_lEquipe_de_LEntraineur_A() {
 		entraineurA = new Entraineur();
