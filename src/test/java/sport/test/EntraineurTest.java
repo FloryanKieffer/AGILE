@@ -7,10 +7,10 @@ import org.junit.Test;
 import junit.framework.TestCase;
 import sport.main.Entraineur;
 import sport.main.Equipe;
-import sport.match.MatchDefensif;
-import sport.match.MatchOffensif;
-import sport.match.MatchPossession;
-import sport.match.MatchStrategy;
+import sport.main.MatchDefensif;
+import sport.main.MatchOffensif;
+import sport.main.MatchPossession;
+import sport.main.MatchStrategy;
 
 public class EntraineurTest extends TestCase {
     private Equipe psg;

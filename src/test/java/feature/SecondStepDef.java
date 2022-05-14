@@ -20,12 +20,12 @@ public class SecondStepDef{
 	
 	@Given("Un match de lEquipe de LEntraineur A contre LEquipe de lEntraineur B")
 	public void un_match_le_lEquipe_de_LEntraineur_A_contre_LEquipe_de_lEntraineur_B() {
-		a = new Equipe();
-	    b = new Equipe();
-	    entraineurA = new Entraineur();
-	    entraineurB = new Entraineur();
-	    entraineurA.setEquipe(a);
-	    entraineurB.setEquipe(b);
+		this.a = new Equipe();
+	    this.b = new Equipe();
+	    this.entraineurA = new Entraineur();
+	    this.entraineurB = new Entraineur();
+	    this.entraineurA.setEquipe(this.a);
+	    this.entraineurB.setEquipe(this.b);
 	    Assert.assertTrue(this.a!=null); Assert.assertTrue(this.b!=null);
 	    Assert.assertTrue(this.entraineurA!=null);
 	  	Assert.assertTrue(this.entraineurB!=null);
@@ -35,7 +35,7 @@ public class SecondStepDef{
 
 	@When("Le match se termine sur le score Equipe de LEntraineur A {int} vs {int} Equipe de LEntraineur B")
 	public void le_match_se_termine_sur_le_score_Equipe_de_LEntraineur_A_vs_Equipe_de_LEntraineur_B(Integer int1, Integer int2) {
-		Equipe.match(a, int1, b, int2);
+		Equipe.match(this.a, int1, this.b, int2);
 	}
 
 	@Then("Equipe A obtient {int} et Equipe B obtient {int} et Entraineur A est {string} Entraineur B est {string}")
@@ -45,10 +45,10 @@ public class SecondStepDef{
 		Integer scoreB = b.getPoints();
 	    assertEquals(int1, scoreA);
 	    assertEquals(int2, scoreB);
-	    entraineurA.performance();
-	    entraineurB.performance();
-	    assertEquals(string, entraineurA.getPerf());
-	    assertEquals(string2, entraineurB.getPerf());
+	    this.entraineurA.performance();
+	    this.entraineurB.performance();
+	    assertEquals(string, this.entraineurA.getPerf());
+	    assertEquals(string2, this.entraineurB.getPerf());
 	}
 }
 

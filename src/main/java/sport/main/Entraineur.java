@@ -2,7 +2,7 @@ package sport.main;
 
 import java.util.ArrayList;
 
-import sport.match.MatchStrategy;
+import sport.main.MatchStrategy;
 
 public class Entraineur {
 

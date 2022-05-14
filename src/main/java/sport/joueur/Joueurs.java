@@ -8,17 +8,29 @@ public class Joueurs implements IComposite {
 
     @Override
     public float getSalaire() {
-        return joueurs.stream().map(j -> j.getSalaire()).reduce((s1, s2) -> s1 + s2).orElse(0f);
+    	float totalSalaire = 0;
+    	for(int i = 0 ; i<this.joueurs.size();i++) {
+    		totalSalaire = totalSalaire + this.joueurs.get(i).getSalaire();
+    	}
+        return totalSalaire;
     }
 
     @Override
     public int getNombreDeJoueurs() {
-        return joueurs.stream().map(j -> j.getNombreDeJoueurs()).reduce((n1, n2)-> n1+n2).orElse(0);
+    	int totalNombreJoueurs = 0;
+    	for(int i = 0 ; i<this.joueurs.size();i++) {
+    		totalNombreJoueurs = totalNombreJoueurs + this.joueurs.get(i).getNombreDeJoueurs();
+    	}
+        return totalNombreJoueurs;
     }
 
     @Override
     public int getTotalButes() {
-        return joueurs.stream().map(j -> j.getTotalButes()).reduce((n1, n2)-> n1+n2).orElse(0);
+    	int totalButs = 0;
+    	for(int i = 0 ; i<this.joueurs.size();i++) {
+    		totalButs = totalButs + this.joueurs.get(i).getTotalButes();
+    	}
+        return totalButs;
     }
 
     public List<IComposite> getJoueurs() {

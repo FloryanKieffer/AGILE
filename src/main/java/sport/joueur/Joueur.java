@@ -18,19 +18,21 @@ public abstract class Joueur implements IComposite {
 
     @Override
     public int getTotalButes() {
-        return nombre_de_butes;
+
+        return this.nombre_de_butes;
     }
 
     public int getNombre_de_butes() {
-        return nombre_de_butes;
+        return this.nombre_de_butes;
     }
-
+    
     public void setNombre_de_butes(int nombre_de_butes) {
         this.nombre_de_butes = nombre_de_butes;
     }
 
     public String getNom() {
-        return nom;
+
+        return this.nom;
     }
 
     public void setNom(String nom) {
@@ -38,7 +40,8 @@ public abstract class Joueur implements IComposite {
     }
 
     public float getSalaire() {
-        return salaire;
+        return this.salaire;
+
     }
 
     public void setSalaire(float salaire) {
